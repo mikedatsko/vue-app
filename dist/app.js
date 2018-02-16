@@ -10976,7 +10976,7 @@ Vue.component('app', {
     todoItemEditIndex: -1
   }),
   mounted() {
-    window.parent.postMessage('FRAME_LOADED','http://localhost:3000');
+    window.parent.postMessage('FRAME_LOADED', 'https://jsmeasure.herokuapp.com');
 
     this.getTodoList();
   }
