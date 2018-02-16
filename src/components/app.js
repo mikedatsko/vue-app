@@ -61,8 +61,8 @@ Vue.component('app', {
     todoItemEdit: {},
     todoItemEditIndex: -1
   }),
-  mounted() {
-    window.parent.postMessage('FRAME_LOADED', 'https://jsmeasure.herokuapp.com');
+  mounted: () => {
+    window.parent.postMessage('FRAME_LOADED', (new URL(document.location.href)).searchParams.get('host_url') || 'http://jsmeasure.surge.sh');
 
     this.getTodoList();
   }
